@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mencari Juara Kelas</title>
+</head>
+<body>
+    <script>
+        const jumlahSiswa = 15;
+
+        function hitungRataRata(nilaiMtk, nilaiIndo, nilaiIng, nilaiPdk, nilaiAgama) {
+            return (nilaiMtk + nilaiIndo + nilaiIng + nilaiPdk + nilaiAgama) / 5;
+        }
+
+        function cekJuaraKelas() {
+        let juaraKelas = 'Tidak ada';
+
+        for (let i = 1; i <= jumlahSiswa; i++) {
+            let nilaiMtk = parseInt(prompt(`Masukkan nilai Matematika untuk siswa ke-${i}:`));
+            let nilaiIndo = parseInt(prompt(`Masukkan nilai Bahasa Indonesia untuk siswa ke-${i}:`));
+            let nilaiIng = parseInt(prompt(`Masukkan nilai Bahasa Inggris untuk siswa ke-${i}:`));
+            let nilaiPdk = parseInt(prompt(`Masukkan nilai Pendidikan untuk siswa ke-${i}:`));
+            let nilaiAgama = parseInt(prompt(`Masukkan nilai Agama untuk siswa ke-${i}:`));
+            let kehadiran = parseInt(prompt(`Masukkan kehadiran siswa ke-${i} (dalam persentase):`));
+
+            let rataRataNilai = hitungRataRata(nilaiMtk, nilaiIndo, nilaiIng, nilaiPdk, nilaiAgama);
+
+            if (rataRataNilai >= 475 && kehadiran === 100) {
+                juaraKelas = `Siswa ke-${i}`;
+                break;
+            }
+        }
+
+        return juaraKelas;
+        }
+
+        let juara = cekJuaraKelas();
+
+        if (juara !== 'Tidak ada') {
+            document.write(`Juara kelas adalah: ${juara}`);
+        } else {
+            document.write('Tidak ada siswa yang memenuhi syarat.');
+        }
+
+    </script>
+</body>
+</html>

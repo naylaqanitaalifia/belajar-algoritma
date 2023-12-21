@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPDB</title>
+</head>
+<body>
+    <script>
+        let raport
+        let prestasi
+        let jalur = prompt("Pilih jalur yang Anda inginkan");
+        let nilaiUN = prompt("Masukkan nilai Anda");
+        let tesMandiri ;
+
+        if (nilaiUN >= 90 && nilaiUN <= 100) {
+            document.write("Nilai sempurna LOLOS");
+        } else if (nilaiUN >= 75 && nilaiUN <= 90) {
+            if (jalur == "raport") {
+                document.write("Anda lulus jalur raport")
+            } else if (jalur == "prestasi") {
+                document.write("Anda lulus jalur prestasi")
+            }
+        } 
+        else if (nilaiUN <= 70) 
+            document.write("Silahkan ikut tes mandiri");
+        
+    </script>
+</body>
+</html>

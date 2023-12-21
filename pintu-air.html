@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Menentukan Kondisi Pintu Air</title>
+</head>
+<body>
+    <script>
+        let tinggiAir = 600;
+        let status ;
+
+        if (tinggiAir <= 500.0) {
+            status = "status aman";
+        } else if (tinggiAir <= 600.0) {
+            status = "status waspada";
+        } else if (tinggiAir <= 650.0) {
+            status = "status siaga 2";
+        } else if (tinggiAir > 650) {
+            status = "siaga1";
+        } else {
+            status = "selesai";
+        }
+
+        console.log(tinggiAir);
+        console.log(status);
+
+    </script>
+</body>
+</html>

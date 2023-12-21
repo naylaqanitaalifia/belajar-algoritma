@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghasilan Penjualan Tiket</title>
+</head>
+<body>
+    <script>
+        const jumlahTiketPerKelas = 50;
+
+        const tiketTerjualVIP = 40;
+        const tiketTerjualEksekutif = 43;
+        const tiketTerjualEkonomi = 38;
+
+        let keuntunganVIP, keuntunganEksekutif, keuntunganEkonomi;
+
+        if (tiketTerjualVIP >= 35) {
+            keuntunganVIP = tiketTerjualVIP * (25 / 100);
+        } else if (tiketTerjualVIP >= 20 && tiketTerjualVIP < 35) {
+            keuntunganVIP = tiketTerjualVIP * (15 / 100);
+        } else {
+            keuntunganVIP = tiketTerjualVIP * (5 / 100);
+        }
+        
+        if (tiketTerjualEksekutif >= 40) {
+            keuntunganEksekutif = tiketTerjualEksekutif * (20 / 100);
+        } else if (tiketTerjualEksekutif >= 20 && tiketTerjualEksekutif < 40) {
+            keuntunganEksekutif = tiketTerjualEksekutif * (10 / 100);
+        } else {
+            keuntunganEksekutif = tiketTerjualEksekutif * (2 / 100);
+        }
+
+        keuntunganEkonomi = tiketTerjualEkonomi * (7 / 100);
+
+        const totalKeuntungan = keuntunganVIP + keuntunganEksekutif + keuntunganEkonomi;
+        const totalTiket = tiketTerjualVIP + tiketTerjualEksekutif + tiketTerjualEkonomi;
+
+        console.log(`Keuntungan kelas VIP adalah ${keuntunganVIP}%`);
+        console.log(`Keuntungan kelas Eksekutif adalah ${keuntunganEksekutif}%`)
+        console.log(`Keuntungan kelas Ekonomi adalah ${keuntunganEkonomi}%`)
+        console.log(`Keuntungan secara keseluruhan adalah ${totalKeuntungan}%`)
+        console.log(`Jumlah tiket per kelas adalah ${jumlahTiketPerKelas}`)
+        console.log(`Total tiket dari seluruh kelas adalah ${totalTiket}`)
+
+    </script>
+</body>
+</html>
